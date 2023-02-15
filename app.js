@@ -14,3 +14,19 @@ buttons.forEach((btn) => {
       }
     });
   });
+
+  window.addEventListener("load", function() {
+    var barra = document.querySelector(".barra");
+    var porcentagem = document.querySelector("#porcentagem");
+    var i = 0;
+    var intervalo = setInterval(function() {
+      if (i >= 100) {
+        clearInterval(intervalo);
+        document.querySelector("#loading").style.display = "none";
+      } else {
+        i += 1;
+        barra.style.width = i + "%";
+        porcentagem.innerHTML = i + "%";
+      }
+    }, 30);
+  });

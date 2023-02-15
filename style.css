@@ -58,6 +58,20 @@ button {
     -webkit-box-shadow: -1px 1px 30px -5px rgba(0,0,0,0.2);
     -moz-box-shadow: -1px 1px 30px -5px rgba(0,0,0,0.2);
     box-shadow: -1px 1px 30px -5px rgba(0,0,0,0.2);
+    
+    /* Essas são declarações de sombra em CSS para diferentes navegadores.
+     A primeira linha -webkit-box-shadow é para o navegador Chrome, 
+    enquanto a segunda linha -moz-box-shadow é para o navegador Firefox.
+    As declarações são escritas da seguinte maneira:
+    A primeira parte box-shadow é uma propriedade que adiciona uma sombra ao elemento.
+    Os valores seguintes -1px 1px definem a posição horizontal e vertical 
+    da sombra em relação ao elemento.
+    Em seguida, 30px define o desfoque da sombra.
+    -5px define o tamanho da sombra.
+    rgba(0,0,0,0.2) define a cor da sombra em formato RGBA (vermelho, verde, azul e alfa).
+    O resultado é uma sombra que aparece no lado esquerdo do
+     elemento, com um leve desfoque,
+     e transmite 20% de opacidade. */
 }
 
 button:hover{
@@ -88,3 +102,43 @@ footer {
   footer a:hover {
     text-decoration: underline;
   }
+
+  .barra {
+    width: 0%;
+    height: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, #0080ff, #00bfff);
+    z-index: 9999;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  #loading {
+    position: fixed;
+    z-index: 9998;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  #porcentagem {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    z-index: 9999;
+  }
+
+#carregandoCalc {
+    position:absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    z-index: 9999;
+    font-family: Century Gothic;
+
+  }
+  
