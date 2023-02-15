@@ -4,7 +4,7 @@ const buttons = document.querySelectorAll("button");
 buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
       if (btn.id === "=") {
-        display.value = eval(display.value);
+      display.value = eval(display.value).toFixed(4); /*Mantem as casas decimais em no maximo 4*/
       } else if (btn.id === "ac") {
         display.value = "";
       } else if (btn.id == "de") {
@@ -30,3 +30,6 @@ buttons.forEach((btn) => {
       }
     }, 30);
   });
+
+ 
+
