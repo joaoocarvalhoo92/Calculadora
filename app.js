@@ -2,16 +2,17 @@ const display = document.querySelector("#display");
 const buttons = document.querySelectorAll("button");
 
 buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      if (btn.id === "=") {
-      display.value = eval(display.value).toFixed(4); /*Mantem as casas decimais em no maximo 4*/
-      } else if (btn.id === "ac") {
-        display.value = "";
-      } else if (btn.id == "de") {
-        display.value = display.value.slice(0, -1);
-      } else {
-        display.value += btn.id;
-      }
+  btn.addEventListener("click", () => {
+    if (btn.id === "=") {
+      const resultado = eval(display.value);
+      display.value = resultado.toLocaleString('pt-BR', { maximumFractionDigits: 4 });
+    } else if (btn.id === "ac") {
+      display.value = "";
+    } else if (btn.id == "de") {
+      display.value = display.value.slice(0, -1);
+    } else {
+      display.value += btn.id;
+    }
     });
   });
 
